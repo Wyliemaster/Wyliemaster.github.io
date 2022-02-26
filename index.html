@@ -1,7 +1,108 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+    <div class="topnav" id="myTopnav">
+        <a href="/" class="active">Home</a>
+        <a href="https://github.com/Wyliemaster">Github</a>
+        <a href="https://www.youtube.com/channel/UCG5I4-KAW3Kwzam4svLJWBA">YouTube</a>
+        <a href="https://twitter.com/TheWylieMaster">Twitter</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <center>
+        <h1 class="title">About Me</h1>
+    </center>
+
+    <div class="about">
+        <center>
+            <p>Hello, my name is <b>Wylie</b> and I am a <a id="age">[age]</a> year old hobbyist programmer from the UK.
+                In my free time I enjoy watching anime, reading manga, playing games or reverse engineering my favourite
+                video games. I am a self-taught programmer and I have been writing programs since July 2020. Some of the
+                programming languages i have learned are: <b>Node.js, Python, PHP, Sql, Rust, C++, Assembly (ARM, x86,
+                    LMC)</b>,
+                however, the quality of the code i write varies depending on the language.</p>
+
+            <p>I also have an interest within language studies. I have been teaching myself Japanese as i have an
+                interest in the products that originate from Japan as well as the culture. As of February 2022, I can
+                confidently read <b>ひらがな (Hiragana)</b> and i can read bits of <b>カタカナ (Katakana)</b></p>
+        </center>
+    </div>
+
+    <center>
+        <h1 class="title">Projects</h1>
+    </center>
+
+    <div class="about">
+        <center>
+            <p>
+                I have worked on various projects. Below are links to my favourite projects <br><a
+                    href="javascript:void(0);" id="projects"></a>
+            </p>
+        </center>
+    </div>
+        
+        <div class="footer">
+            <p>Contact</p>
+          <p>Discord: Wylie#2674 | Twitter: @TheWylieMaster</p>
+        </div> 
+
+
+
+    <script>
+        document.getElementById("age").innerHTML = Math.floor(((new Date().getTime() / 1000) - 1031087815) / 60 / 60 / 24 / 365);
+
+        var currentFile = null;
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function readTextFile(file) {
+            console.log("reading file")
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4) {
+                    if (rawFile.status === 200 || rawFile.status == 0) {
+                        var allText = rawFile.responseText;
+                        currentFile = allText
+                    }
+                }
+            }
+            rawFile.send(null);
+        }
+
+        function getProjects() {
+            readTextFile("projects.csv");
+            var list = ''
+            if (currentFile) {
+                let projects = currentFile.split('\n')
+                projects.forEach(element => {
+                    let data = element.split(',');
+                    list += `<li><a href="${data[1]}" class="proj">${data[0]}</li>`
+                });
+
+                document.getElementById("projects").innerHTML = list;
+            }
+
+        }
+
+        getProjects()
+    </script>
+
 </body>
+
 </html>
