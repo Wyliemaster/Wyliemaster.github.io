@@ -71,7 +71,6 @@
         }
 
         function readTextFile(file) {
-            console.log("reading file")
             var rawFile = new XMLHttpRequest();
             rawFile.open("GET", file, false);
             rawFile.onreadystatechange = function () {
