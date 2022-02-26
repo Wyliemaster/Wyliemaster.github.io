@@ -103,3 +103,7 @@ h1{
     font-weight: bold;
 }
 
+a{
+    display:inline-block;
+    padding-bottom: 30px;
+}
