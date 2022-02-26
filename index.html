@@ -18,9 +18,7 @@
         </a>
     </div>
 
-    <center>
-        <h1 class="title">About Me</h1>
-    </center>
+    <h1 class="title">About Me</h1>
 
     <div class="about">
         <center>
@@ -37,15 +35,13 @@
         </center>
     </div>
 
-    <center>
-        <h1 class="title">Projects</h1>
-    </center>
+    <h1 class="title">Projects</h1>
 
     <div class="about">
         <center>
             <p>
-                I have worked on various projects. Below are links to my favourite projects <br><a
-                    href="javascript:void(0);" id="projects"></a>
+                I have worked on various projects. Below are links to some of my most notable projects<a
+                    id="projects"></a>
             </p>
         </center>
     </div>
@@ -55,12 +51,9 @@
         <p>Discord: Wylie#2674 | Twitter: @TheWylieMaster</p>
     </div>
 
-
-
     <script>
         document.getElementById("age").innerHTML = Math.floor(((new Date().getTime() / 1000) - 1031087815) / 60 / 60 / 24 / 365);
 
-        var currentFile = null;
 
         function myFunction() {
             var x = document.getElementById("myTopnav");
@@ -84,23 +77,18 @@
             }
             rawFile.send(null);
         }
+        var currentFile = null;
+        readTextFile("projects.csv");
+        var list = ''
+        if (currentFile) {
+            let projects = currentFile.split('\n')
+            projects.forEach(element => {
+                let data = element.split(',');
+                list += `<li><a href="${data[1]}" class="proj">${data[0]}</li>`
+            });
 
-        function getProjects() {
-            readTextFile("projects.csv");
-            var list = ''
-            if (currentFile) {
-                let projects = currentFile.split('\n')
-                projects.forEach(element => {
-                    let data = element.split(',');
-                    list += `<li><a href="${data[1]}" class="proj">${data[0]}</li>`
-                });
-
-                document.getElementById("projects").innerHTML = list;
-            }
-
+            document.getElementById("projects").innerHTML = list;
         }
-
-        getProjects()
     </script>
 
 </body>
