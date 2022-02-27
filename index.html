@@ -22,31 +22,30 @@
     <h1 class="title">About Me</h1>
 
     <div class="about">
-            <p>Hello, my name is <b>Wylie</b> and I am a <a id="age">[age]</a> year old hobbyist programmer from the UK.
-                In my free time I enjoy watching anime, reading manga, playing games or reverse engineering my favourite
-                video games. I am a self-taught programmer and I have been writing programs since July 2020. Some of the
-                programming languages i have learned are: <b>Node.js, Python, PHP, Sql, Rust, C++, Assembly (ARM, x86,
-                    LMC)</b>,
-                however, the quality of the code i write varies depending on the language.</p>
+        <p style="font-size: 125%;">Hello, my name is <b>Wylie</b> and I am a <a id="age" style="padding: 0;">[age]</a> year old hobbyist programmer from the UK.
+            In my free time I enjoy watching anime, reading manga, playing games or reverse engineering my favourite video games. I am a self-taught programmer and I have been writing programs since July 2020. Some of the
+            programming languages i have learned are: <b>Node.js, Python, PHP, Sql, Rust, C++, Assembly (ARM, x86,
+                LMC)</b>,
+            however, the quality of the code i write varies depending on the language.</p>
 
-            <p>I also have an interest within language studies. I have been teaching myself Japanese as i have an
-                interest in the products that originate from Japan as well as the culture. As of February 2022, I can
-                confidently read <b>ひらがな (Hiragana)</b> and i can read bits of <b>カタカナ (Katakana)</b></p>
+        <p style="font-size: 125%;">I also have an interest within language studies. I have been teaching myself Japanese as i have an
+            interest in the products that originate from Japan as well as the culture. As of February 2022, I can
+            confidently read <b>ひらがな (Hiragana)</b> and i can read bits of <b>カタカナ (Katakana)</b></p>
     </div>
 
     <h1 class="title">Projects</h1>
 
     <div class="about">
-            <p>
-                I have worked on various projects. Below are links to some of my most notable projects
-            </p>
-            <!-- stolen the portfolio format from colon -->
-            <div class="test" id="projects"></div>
+        <p>
+            I have worked on various projects. Below are links to some of my most notable projects
+        </p>
+        <!-- stolen the portfolio format from colon -->
+        <div class="test" id="projects"></div>
     </div>
 
     <div class="footer">
         <p>Contact</p>
-        <p>Discord: Wylie#2674 | Twitter: @TheWylieMaster</p>
+        <p>Discord: Wylie#2674 | Twitter: <a href="https://twitter.com/messages/compose?recipient_id=954830132069437440" style="text-decoration: none;  color: #b2aefc;">@TheWylieMaster</a></p>
     </div>
 
     <script>
@@ -76,18 +75,21 @@
             rawFile.send(null);
         }
         var currentFile = null;
-        readTextFile("projects.csv");
-        var list = ''
+
+        readTextFile('data.json')
+        var projects = '';
         if (currentFile) {
-            let projects = currentFile.split('\n')
-            projects.forEach(element => {
-                let data = element.split(',');
-                list += `<a href="${data[1]}" class="button" style="text-decoration: none;  color: #000000;"><p class="btnT">${data[0]}</p><p class="btnC">${data[2]}</p></a>`
-                console.log(data)
+            let projData = JSON.parse(currentFile).projects;
+
+            projData.forEach(proj => {
+                // Todo: add icon support
+                projects += `<a href="${proj.link}" class="button" style="text-decoration: none;  color: #000000;"><p class="btnT">${proj.name}</p><p class="btnC">${proj.description}</p></a>`
             });
 
-            document.getElementById("projects").innerHTML = list;
+            document.getElementById("projects").innerHTML = projects;
+
         }
+
     </script>
 
 </body>

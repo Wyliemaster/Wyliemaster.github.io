@@ -3,6 +3,7 @@
 body{
 	margin:0;
 	padding:0;
+  padding-bottom: 10%;
     background: rgb(220,254,255);
     background: -moz-radial-gradient(circle, rgba(220,254,255,1) 0%, rgba(157,197,215,1) 51%, rgba(102,157,168,1) 100%);
     background: -webkit-radial-gradient(circle, rgba(220,254,255,1) 0%, rgba(157,197,215,1) 51%, rgba(102,157,168,1) 100%);
@@ -81,7 +82,8 @@ h1{
     color: white;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: xx-small;
+    font-size:small;
+    margin-bottom: 0;
   }
 
 /* My Code */
@@ -94,7 +96,6 @@ h1{
 .about {
     padding-left: 10%;
     padding-right: 10%;
-    /* padding-bottom: 10px; */
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
 }
@@ -116,30 +117,33 @@ a{
 }
 
 .button {
-    background-color: rgba(89, 89, 90, 0.337);
+    background-color: rgba(91, 91, 99, 0.337);
     font-family: 'Source Sans Pro', sans-serif;
     border-radius: 10px;
-    width: 25%;
-    margin: 10px;
+    width: 35%;
+    margin: 1.5%;
     overflow: hidden;
     transition: all .2s ease-in-out; 
+    padding: 50px;
 }
 
 .btnT {
 font-weight: bolder;
+font-size: 150%;
 
 }
 
 .btnC{
-font-size: smaller;
-
+font-size: 100%;
 }
 
 .button:hover { 
-    transform: scale(1.1); 
+    transform: scale(1.05); 
+    background-color: rgba(91, 91, 99, 0.5);
+
 }
 
-@media screen and ( max-width: 500px ) { 
+@media (max-height: 680px), screen and (orientation: portrait) {
     .test { 
         flex-direction: column; 
         justify-content: center;
