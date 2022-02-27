@@ -40,7 +40,8 @@
             <p>
                 I have worked on various projects. Below are links to some of my most notable projects
             </p>
-            <a id="projects"></a>
+            <!-- stolen the portfolio format from colon -->
+            <div class="test" id="projects"></div>
     </div>
 
     <div class="footer">
@@ -81,7 +82,8 @@
             let projects = currentFile.split('\n')
             projects.forEach(element => {
                 let data = element.split(',');
-                list += `<li><a href="${data[1]}" class="proj">${data[0]}</li>`
+                list += `<a href="${data[1]}" class="button" style="text-decoration: none;  color: #000000;"><p class="btnT">${data[0]}</p><p class="btnC">${data[2]}</p></a>`
+                console.log(data)
             });
 
             document.getElementById("projects").innerHTML = list;

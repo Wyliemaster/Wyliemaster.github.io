@@ -108,3 +108,46 @@ a{
     display:inline-block;
     padding-bottom: 30px;
 }
+
+.test{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.button {
+    background-color: rgba(89, 89, 90, 0.337);
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 10px;
+    width: 25%;
+    margin: 10px;
+    overflow: hidden;
+    transition: all .2s ease-in-out; 
+}
+
+.btnT {
+font-weight: bolder;
+
+}
+
+.btnC{
+font-size: smaller;
+
+}
+
+.button:hover { 
+    transform: scale(1.1); 
+}
+
+@media screen and ( max-width: 500px ) { 
+    .test { 
+        flex-direction: column; 
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .button {
+        width: auto;
+    }
+
+  }
