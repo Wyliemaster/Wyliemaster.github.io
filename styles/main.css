@@ -110,7 +110,7 @@ a{
     padding-bottom: 30px;
 }
 
-.test{
+.projectBtns{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -155,3 +155,11 @@ font-size: 100%;
     }
 
   }
+
+.giantTitleText {
+  margin: 10%;
+  font-weight: bolder;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 500%;
+  text-align: center;
+}

@@ -29,6 +29,12 @@
             "description": "In-Depth Documentation about an abandonded mobile game created by RobTopGames called Boomlings",
             "link": "https://github.com/Wyliemaster/boomlings-docs",
             "icon": null
+        },
+        {
+        "name": "Cod3Breaker",
+        "description": "A Geometry Dash modification that finds your unique 'Cod3Breaker' Code for the Vault of Secrets",
+        "link":"https://github.com/Wyliemaster/cod3breaker-mod",
+        "icon":null
         }
     ]
 }
