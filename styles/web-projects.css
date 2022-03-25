@@ -52,7 +52,7 @@
 }
 
 .project-btn-desc {
-    font-size:larger
+    font-size:larger;
 }
 
 .project-btn:hover { 
@@ -68,6 +68,8 @@
 
 .issue-title {
     font-size: 70px;
+    margin: 0;
+
 }
 
 .info {
@@ -76,6 +78,8 @@
 
 .issue-desc {
     font-size: 50px;
+    margin: 1%;
+
 }
 
 img {
