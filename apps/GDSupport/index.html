@@ -53,7 +53,7 @@
 
                 let fixMsg = issue["issue-fix"] == null ? `As of ${getDate()}, There is no known fix` : issue["issue-fix"]
                 document.getElementById("issues").innerHTML += `<a class="project-btn" href="#${issue_name}"><b class="project-btn-title">${issue["issue-name"]}`  
-                document.getElementById("info").innerHTML += `<div class="issue-container"><p class="issue-title" id="${issue_name}">${issue["issue-name"]}<b><p class="issue-desc">Description and Technical Explanation</p></b></p><p class="issue-desc">${issue["issue-description"]}</p><b><p class="issue-desc">Fixes</p></b><p class="issue-desc">${fixMsg}</p></div>`  
+                document.getElementById("info").innerHTML += `<div class="issue-container"><p class="issue-title" id="${issue_name}">${issue["issue-name"]}<b><p class="issue-desc">Description and Technical Explanation</p></b></p><p class="issue-desc">${issue["issue-description"]}</p><b><p class="issue-desc">Fixes</p></b><p class="info">${fixMsg}</p></div>`  
 
             });
         })

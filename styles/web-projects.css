@@ -60,6 +60,12 @@ img {
     background-color: rgba(91, 91, 99, 0.5);
 }
 
+@media (max-height: 680px), screen and (orientation: portrait) {
+    .project-btn {
+        width: 70%;
+    }
+}
+
 .issue-title {
     font-size: 70px;
 }
