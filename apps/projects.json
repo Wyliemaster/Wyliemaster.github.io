@@ -1,0 +1,9 @@
+{
+  "projects": [
+      {
+          "title": "GD Support",
+          "desc": "An In-depth document explaining issues within Geometry Dash",
+          "link": "/apps/GDSupport/index.html"
+      }
+  ]
+}

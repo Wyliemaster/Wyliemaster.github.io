@@ -140,7 +140,6 @@ font-size: 100%;
 .button:hover { 
     transform: scale(1.05); 
     background-color: rgba(91, 91, 99, 0.5);
-
 }
 
 @media (max-height: 680px), screen and (orientation: portrait) {
@@ -156,10 +155,3 @@ font-size: 100%;
 
   }
 
-.giantTitleText {
-  margin: 10%;
-  font-weight: bolder;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 500%;
-  text-align: center;
-}

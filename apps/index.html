@@ -3,14 +3,16 @@
 
 <head>
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/web-projects.css">
     <link rel="icon" href="https://avatars.githubusercontent.com/u/62946885?v=4">
+    <title>Web Projects</title>
 </head>
 
 <body>
 
     <div class="topnav" id="myTopnav">
         <a href="/">Home</a>
-        <a href="" onClick="alert('No Web Apps yet');" class="active">Web Apps</a>
+        <a href="/apps/index.html">Web Projects</a>
         <a href="https://github.com/Wyliemaster">Github</a>
         <a href="https://www.youtube.com/channel/UCG5I4-KAW3Kwzam4svLJWBA">YouTube</a>
         <a href="https://twitter.com/TheWylieMaster">Twitter</a>
@@ -19,7 +21,10 @@
         </a>
     </div>
 
-    <div class="giantTitleText">Under Construction</div>
+    <div class="giantTitleText">Web Projects</div>
+    <div class="project-btns" id="projects"></div>
+
+
 
 
     <script>
@@ -31,6 +36,15 @@
                 x.className = "topnav";
             }
         }
+
+        fetch("projects.json").then(x => x.json()).then(data => {
+            let projects = data["projects"];
+            projects.forEach(proj => {
+                document.getElementById("projects").innerHTML += `<a class="project-btn" href="${proj.link}"><b class="project-btn-title">${proj.title}</b><p class="project-btn-desc">${proj.desc}</p></a>`;
+            });
+        })
+
+
     </script>
 
 </body>
