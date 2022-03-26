@@ -108,6 +108,11 @@ img {
     height:100%;
     vertical-align:middle;
 }
+
+img {
+    max-width: 80%;
+}
+
 .hover_bkgr_fricc > div {
     margin: 5%;
     background-color: rgb(191, 203, 255);
