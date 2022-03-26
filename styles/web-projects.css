@@ -113,6 +113,8 @@ img {
     max-width: 80%;
 }
 
+/* Credits to https://html-online.com/articles/simple-popup-box/ */
+
 .hover_bkgr_fricc > div {
     margin: 5%;
     background-color: rgb(191, 203, 255);
@@ -154,5 +156,5 @@ img {
     display: inline-block;
     font-weight: bold;
 }
-/* Popup box BEGIN */
+/* Popup box End */
 
