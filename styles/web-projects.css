@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Source+Sans+Pro&display=swap');
+
 *{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: sans-serif;
 }
 
 .giantTitleText {
     margin: 3%;
     font-weight: bolder;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Patua One', cursive;
     font-size: 500%;
     text-align: center;
   }

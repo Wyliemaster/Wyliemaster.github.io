@@ -19,7 +19,7 @@
       </a>
     </div>
 
-    <div class="giantTitleText" id="top">Known Issues</div>
+    <div class="giantTitleText" id="top">Known Issues & Topics</div>
 
     <p style="font-size: x-large">
       If you have any suggestions for what to add please
@@ -83,7 +83,7 @@
                                                 </p>
                                                     <b>
                                                         <p class="issue-desc">
-                                                            Fixes
+                                                            ${issue["type"] == "BUG" ? "Fixes" : issue["type"] == "INFO" ? "Extra Info" : ""}
                                                         </p>
                                                     </b>
                                                         <p class="info">
