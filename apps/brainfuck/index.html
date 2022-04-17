@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/web-projects.css" />
+    <link
+      rel="icon"
+      href="https://avatars.githubusercontent.com/u/62946885?v=4"
+    />
+    <title>BrainF*ck</title>
+  </head>
+
+  <body>
+    <div class="topnav" id="myTopnav">
+      <a href="/">Home</a>
+      <a href="/apps/index.html">Web Projects</a>
+      <a href="https://github.com/Wyliemaster">Github</a>
+      <a href="https://www.youtube.com/channel/UCG5I4-KAW3Kwzam4svLJWBA"
+        >YouTube</a
+      >
+      <a href="https://twitter.com/TheWylieMaster">Twitter</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="BF_code">
+        <h1>UNFINISHED!!!!</h1>
+      <label class="BF_Title">Brainf*ck Interpreter</label>
+      <textarea name="BF_input" class="BF_cInput" id="BF_input"></textarea>
+      <div class="BF_Submit" onclick="parse_code()">Submit</div>
+    </div>
+
+    <div class="BF_output"></div>
+
+    <script>
+      // MEM_SIZE: 16-BIT int limit
+      let memory = Array(65536).fill(0);
+      let pointer = 0;
+      let output = "";
+
+      function parse_code() {
+        output = "";
+        let raw = document.getElementById("BF_input").value;
+        for (let idx = 0; idx < raw.length; idx++) {
+          if (!validOperator(raw[idx]))
+            continue;
+
+          let some = execute_operator(raw[idx]);
+          if (some == 1) {
+            let loop_end = find_next_loop_end(raw, idx);
+            loop(raw.slice(idx, loop_end));
+            idx = loop_end
+          }
+          console.log(idx)
+        }
+      }
+
+      function validOperator(ch) {
+        return [">", "<", "+", "-", "[", "]", ",", "."].includes(ch);
+      }
+
+      function resetMemory() {
+        memory.fill(0);
+        console.log("[LOG] Memory Cleared");
+      }
+
+      function shiftPointer(direction) {
+        switch (direction) {
+          case "<":
+            pointer == 0 ? 0 : (pointer -= 1);
+            break;
+          case ">":
+            pointer == 65536 ? 65536 : (pointer += 1);
+            break;
+        }
+      }
+
+      function add() {
+        memory[pointer]++;
+      }
+
+      function sub() {
+        memory[pointer]--;
+      }
+
+      function out() {
+        output += String.fromCharCode(memory[pointer]);
+      }
+
+      function loop(code) {
+        let x = 0;
+        while (x < 100) {
+          // safety mechanism
+          x++;
+          for (let i = 0; i < code.length; i++) {
+            execute_operator(code[i], i);
+          }
+          if (memory[pointer] == 0) break;
+        }
+      }
+
+      function find_next_loop_end(code, i) {
+        return code.slice(i).toString().search("]");
+      }
+
+      function get_input() {
+        let input = prompt("Enter a number");
+        if (!isNaN(parseInt(input))) {
+          memory[pointer] = parseInt(input);
+        }
+      }
+
+      function execute_operator(ch) {
+        switch (ch) {
+          case "+":
+            add();
+            break;
+          case "-":
+            sub();
+            break;
+          case "<":
+          case ">":
+            shiftPointer(ch);
+            break;
+          case ".":
+            out();
+            break;
+          case ",":
+            get_input();
+            break;
+          default:
+            return 1;
+        }
+        return null;
+      }
+    </script>
+  </body>
+</html>

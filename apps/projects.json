@@ -5,5 +5,12 @@
           "desc": "An In-depth document explaining issues within Geometry Dash",
           "link": "/apps/GDSupport/index.html"
       }
+  ],
+  "Unfinished": [
+    {
+      "title": "Brainf*ck",
+      "desc": "An interpreter for the Brainf*ck Programming Language",
+      "link": "/apps/Brainfuck/index.html"
+  }
   ]
 }
