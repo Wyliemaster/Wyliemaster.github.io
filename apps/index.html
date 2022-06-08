@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/web-projects.css">
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/62946885?v=4">
+  <head>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/web-projects.css" />
+    <link
+      rel="icon"
+      href="https://avatars.githubusercontent.com/u/62946885?v=4"
+    />
     <title>Web Projects</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="topnav" id="myTopnav">
-        <a href="/">Home</a>
-        <a href="/apps/index.html">Web Projects</a>
-        <a href="https://github.com/Wyliemaster">Github</a>
-        <a href="https://www.youtube.com/channel/UCG5I4-KAW3Kwzam4svLJWBA">YouTube</a>
-        <a href="https://twitter.com/TheWylieMaster">Twitter</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+      <a href="/">Home</a>
+      <a href="/apps/index.html">Web Projects</a>
+      <a href="https://github.com/Wyliemaster">Github</a>
+      <a href="https://www.youtube.com/channel/UCG5I4-KAW3Kwzam4svLJWBA"
+        >YouTube</a
+      >
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
 
     <div class="giantTitleText">Web Projects</div>
     <div class="project-btns" id="projects"></div>
 
-
-
-
     <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
         }
+      }
 
-        fetch("projects.json").then(x => x.json()).then(data => {
-            let projects = data["projects"];
-            projects.forEach(proj => {
-                document.getElementById("projects").innerHTML += `<a class="project-btn" href="${proj.link}"><b class="project-btn-title">${proj.title}</b><p class="project-btn-desc">${proj.desc}</p></a>`;
-            });
-        })
-
-
+      fetch("projects.json")
+        .then((x) => x.json())
+        .then((data) => {
+          let projects = data["projects"];
+          projects.forEach((proj) => {
+            document.getElementById(
+              "projects"
+            ).innerHTML += `<a class="project-btn" href="${proj.link}"><b class="project-btn-title">${proj.title}</b><p class="project-btn-desc">${proj.desc}</p></a>`;
+          });
+        });
     </script>
-
-</body>
-
+  </body>
 </html>

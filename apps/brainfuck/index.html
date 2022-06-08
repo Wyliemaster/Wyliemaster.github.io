@@ -18,122 +18,101 @@
       <a href="https://www.youtube.com/channel/UCG5I4-KAW3Kwzam4svLJWBA"
         >YouTube</a
       >
-      <a href="https://twitter.com/TheWylieMaster">Twitter</a>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
 
-    <div class="BF_code">
-        <h1>UNFINISHED!!!!</h1>
-      <label class="BF_Title">Brainf*ck Interpreter</label>
-      <textarea name="BF_input" class="BF_cInput" id="BF_input"></textarea>
-      <div class="BF_Submit" onclick="parse_code()">Submit</div>
-    </div>
+    <div class="BF_code"></div>
 
     <div class="BF_output"></div>
 
     <script>
-      // MEM_SIZE: 16-BIT int limit
-      let memory = Array(65536).fill(0);
+      const TOKENS = {
+        "+": increment,
+        "-": decrement,
+        "<": left_shift,
+        ">": right_shift,
+        ".": output,
+        ",": input,
+        "[": left_loop,
+        "]": right_loop,
+      };
+      const MEMORY_SIZE = 30000;
+      const DEBUG = false;
+
+      var code_pos = 0;
+      var safety_idx = 0;
+
+      let memory = new Array(MEMORY_SIZE).fill(0);
       let pointer = 0;
-      let output = "";
+      let stack = []; // position of the start of loops
 
-      function parse_code() {
-        output = "";
-        let raw = document.getElementById("BF_input").value;
-        for (let idx = 0; idx < raw.length; idx++) {
-          if (!validOperator(raw[idx]))
-            continue;
+      let string = "";
 
-          let some = execute_operator(raw[idx]);
-          if (some == 1) {
-            let loop_end = find_next_loop_end(raw, idx);
-            loop(raw.slice(idx, loop_end));
-            idx = loop_end
-          }
-          console.log(idx)
-        }
-      }
-
-      function validOperator(ch) {
-        return [">", "<", "+", "-", "[", "]", ",", "."].includes(ch);
-      }
-
-      function resetMemory() {
-        memory.fill(0);
-        console.log("[LOG] Memory Cleared");
-      }
-
-      function shiftPointer(direction) {
-        switch (direction) {
-          case "<":
-            pointer == 0 ? 0 : (pointer -= 1);
-            break;
-          case ">":
-            pointer == 65536 ? 65536 : (pointer += 1);
-            break;
-        }
-      }
-
-      function add() {
+      function increment() {
         memory[pointer]++;
       }
 
-      function sub() {
+      function decrement() {
         memory[pointer]--;
       }
 
-      function out() {
-        output += String.fromCharCode(memory[pointer]);
+      function left_shift() {
+        if (pointer > 0) pointer--;
       }
 
-      function loop(code) {
-        let x = 0;
-        while (x < 100) {
-          // safety mechanism
-          x++;
-          for (let i = 0; i < code.length; i++) {
-            execute_operator(code[i], i);
+      function right_shift() {
+        if (pointer < MEMORY_SIZE) pointer++;
+      }
+
+      function output() {
+        string += String.fromCharCode(memory[pointer]); // console for now
+      }
+
+      function input() {
+        let user_input = parseInt(window.prompt("Enter a Number"))
+        if(isNaN(user_input))
+          return input();
+
+          memory[pointer] = user_input;
+      }
+
+      function left_loop() {
+        if (DEBUG) console.log(`[ TOKEN found at ${code_pos}`);
+        stack.push(code_pos);
+      }
+
+      function right_loop() {
+        if (memory[pointer] == 0) {
+          stack.pop();
+          return;
+        }
+
+        if (DEBUG) console.log(`] TOKEN found at ${code_pos}`);
+
+        if (stack.length == 0) return;
+
+        code_pos = stack.at(-1);
+      }
+
+      function exec_BF(code)
+      {
+        const LEN = code.length;
+        while(code_pos < LEN)
+        {
+
+          try {
+            TOKENS[code[code_pos]]();
+          } catch
+          {
+            continue;
           }
-          if (memory[pointer] == 0) break;
+          code_pos++;
+          if(++safety_idx == 10000) break;
         }
       }
-
-      function find_next_loop_end(code, i) {
-        return code.slice(i).toString().search("]");
-      }
-
-      function get_input() {
-        let input = prompt("Enter a number");
-        if (!isNaN(parseInt(input))) {
-          memory[pointer] = parseInt(input);
-        }
-      }
-
-      function execute_operator(ch) {
-        switch (ch) {
-          case "+":
-            add();
-            break;
-          case "-":
-            sub();
-            break;
-          case "<":
-          case ">":
-            shiftPointer(ch);
-            break;
-          case ".":
-            out();
-            break;
-          case ",":
-            get_input();
-            break;
-          default:
-            return 1;
-        }
-        return null;
-      }
+ 
     </script>
   </body>
 </html>

@@ -3,13 +3,7 @@
         {
             "name": "Geometry Dash Documentation",
             "description": "In-Depth Documentation about the popular rhythm-based platformer, Geometry Dash",
-            "link": "https://github.com/Wyliemaster/gddocs",
-            "icon": null
-        },
-        {
-            "name": "LMC Interpreter",
-            "description": "An Interpreter for the Little Man Computer Assembly language",
-            "link": "https://github.com/Wyliemaster/LMC-Interpreter",
+            "link": "https://docs.gdprogra.me/#/",
             "icon": null
         },
         {
@@ -19,22 +13,16 @@
             "icon": null
         },
         {
-            "name": "Zoo Webhook",
-            "description": "A webhook for the RoboTop's zoo minigame",
-            "link": "https://github.com/Wyliemaster/Robotop-Zoo-Webhook",
+            "name": "RE-Tools",
+            "description": "Tools i created to assist with reverse engineering",
+            "link": "https://github.com/Wyliemaster/RE-Tools",
             "icon": null
         },
         {
-            "name": "Boomlings Documentation",
-            "description": "In-Depth Documentation about an abandonded mobile game created by RobTopGames called Boomlings",
-            "link": "https://github.com/Wyliemaster/boomlings-docs",
+            "name": "LMC Interpreter",
+            "description": "An Interpreter for the Little Man Computer Assembly language",
+            "link": "https://github.com/Wyliemaster/LMC-Interpreter",
             "icon": null
-        },
-        {
-        "name": "Cod3Breaker",
-        "description": "A Geometry Dash modification that finds your unique 'Cod3Breaker' Code for the Vault of Secrets",
-        "link":"https://github.com/Wyliemaster/cod3breaker-mod",
-        "icon":null
         }
     ]
 }
