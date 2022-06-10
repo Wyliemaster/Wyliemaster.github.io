@@ -25,9 +25,10 @@
     </div>
 
     <div class="BF_INPUT">
-
       <textarea id="BF_CODE" class="BF_CODE"></textarea>
-      <button onclick="extract_code_from_text_area()" class="BF_BTN">Run Code</button>
+      <button onclick="extract_code_from_text_area()" class="BF_BTN">
+        Run Code
+      </button>
       <button onclick="reset()" class="BF_BTN">Reset Cache</button>
     </div>
 
@@ -60,14 +61,12 @@
       let string = "";
       let code = "";
 
-      function extract_code_from_text_area()
-      {
+      function extract_code_from_text_area() {
         code = document.getElementById("BF_CODE").value;
-        exec_BF(code)
+        exec_BF(code);
 
-       var node = document.createTextNode(string.toString());
-       document.getElementById("iBF_OUTPUT").appendChild(node)
-
+        var node = document.createTextNode(string.toString());
+        document.getElementById("iBF_OUTPUT").appendChild(node);
       }
 
       function reset() {
@@ -77,7 +76,7 @@
         code_pos = 0;
         safety_idx = 0;
         string = "";
-        document.getElementById("iBF_OUTPUT").innerHTML = ""
+        document.getElementById("iBF_OUTPUT").innerHTML = "";
       }
 
       function DEBUG_LOG(log) {
