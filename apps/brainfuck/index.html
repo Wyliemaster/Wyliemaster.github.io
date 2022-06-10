@@ -39,7 +39,7 @@
         "]": right_loop,
       };
       const MEMORY_SIZE = 30000;
-      const DEBUG = false;
+      const DEBUG = true;
 
       var code_pos = 0;
       var safety_idx = 0;
@@ -49,6 +49,19 @@
       let stack = []; // position of the start of loops
 
       let string = "";
+
+      function reset() {
+        memory = new Array(MEMORY_SIZE).fill(0);
+        pointer = 0;
+        stack = []; // position of the start of loops
+        code_pos = 0;
+        safety_idx = 0;
+        string = "";
+      }
+
+      function DEBUG_LOG(log) {
+        console.log(`[LOG] ${log}`);
+      }
 
       function increment() {
         memory[pointer]++;
@@ -71,15 +84,13 @@
       }
 
       function input() {
-        let user_input = parseInt(window.prompt("Enter a Number"))
-        if(isNaN(user_input))
-          return input();
+        let user_input = parseInt(window.prompt("Enter a Number"));
+        if (isNaN(user_input)) return input();
 
-          memory[pointer] = user_input;
+        memory[pointer] = user_input;
       }
 
       function left_loop() {
-        if (DEBUG) console.log(`[ TOKEN found at ${code_pos}`);
         stack.push(code_pos);
       }
 
@@ -89,30 +100,34 @@
           return;
         }
 
-        if (DEBUG) console.log(`] TOKEN found at ${code_pos}`);
-
         if (stack.length == 0) return;
 
         code_pos = stack.at(-1);
       }
 
-      function exec_BF(code)
-      {
+      function exec_BF(code) {
         const LEN = code.length;
-        while(code_pos < LEN)
-        {
 
+        while (code_pos < LEN) {
           try {
-            TOKENS[code[code_pos]]();
-          } catch
-          {
+            TOKENS[code[code_pos++]]();
+          } catch {
+            if (DEBUG)
+              DEBUG_LOG(
+                `Unknown TOKEN("${code[code_pos - 1]}") at position ${
+                  code_pos - 1
+                }`
+              );
             continue;
           }
-          code_pos++;
-          if(++safety_idx == 10000) break;
+
+          if (++safety_idx == 1000000) break;
         }
+
+        if (DEBUG) DEBUG_LOG(`All Tokens have been executed`);
+
+        return true;
       }
- 
     </script>
   </body>
 </html>
