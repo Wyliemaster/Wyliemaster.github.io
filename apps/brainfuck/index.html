@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="./BF.css" />
     <link rel="stylesheet" href="../../styles/web-projects.css" />
     <link
       rel="icon"
@@ -23,9 +24,17 @@
       </a>
     </div>
 
-    <div class="BF_code"></div>
+    <div class="BF_INPUT">
 
-    <div class="BF_output"></div>
+      <textarea id="BF_CODE" class="BF_CODE"></textarea>
+      <button onclick="extract_code_from_text_area()" class="BF_BTN">Run Code</button>
+      <button onclick="reset()" class="BF_BTN">Reset Cache</button>
+    </div>
+
+    <div class="BF_OUTPUT">
+      <label>Output:</label>
+      <label id="iBF_OUTPUT"></label>
+    </div>
 
     <script>
       const TOKENS = {
@@ -49,6 +58,17 @@
       let stack = []; // position of the start of loops
       let error_stack = [];
       let string = "";
+      let code = "";
+
+      function extract_code_from_text_area()
+      {
+        code = document.getElementById("BF_CODE").value;
+        exec_BF(code)
+
+       var node = document.createTextNode(string.toString());
+       document.getElementById("iBF_OUTPUT").appendChild(node)
+
+      }
 
       function reset() {
         memory = new Array(MEMORY_SIZE).fill(0);
@@ -57,6 +77,7 @@
         code_pos = 0;
         safety_idx = 0;
         string = "";
+        document.getElementById("iBF_OUTPUT").innerHTML = ""
       }
 
       function DEBUG_LOG(log) {
