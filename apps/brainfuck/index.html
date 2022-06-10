@@ -47,7 +47,7 @@
       let memory = new Array(MEMORY_SIZE).fill(0);
       let pointer = 0;
       let stack = []; // position of the start of loops
-
+      let error_stack = [];
       let string = "";
 
       function reset() {
@@ -118,10 +118,10 @@
                   code_pos - 1
                 }`
               );
-            continue;
+            error_stack.push(code - 1);
           }
 
-          if (++safety_idx == 1000000) break;
+          if (++safety_idx == 10000000) break;
         }
 
         if (DEBUG) DEBUG_LOG(`All Tokens have been executed`);
