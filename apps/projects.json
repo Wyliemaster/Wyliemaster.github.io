@@ -8,7 +8,7 @@
       {
         "title": "Brainf*ck",
         "desc": "An interpreter for the Brainf*ck esoteric programming Language",
-        "link": "/apps/Brainfuck/index.html"
+        "link": "/apps/brainfuck/index.html"
     }
   ],
   "Unfinished": [
