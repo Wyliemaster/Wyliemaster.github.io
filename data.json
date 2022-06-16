@@ -23,6 +23,12 @@
             "description": "An Interpreter for the Little Man Computer Assembly language",
             "link": "https://github.com/Wyliemaster/LMC-Interpreter",
             "icon": null
+        },
+        {
+            "name": "Geometry Dash Save Decryptor",
+            "description": "A python program to decrypt Geometry Dash Save files",
+            "link": "https://github.com/Wyliemaster/GD-Save-Decrypter",
+            "icon": null
         }
     ]
 }
