@@ -19,6 +19,12 @@
             "icon": null
         },
         {
+            "name": "Writeups",
+            "description": "Write ups for reverse engineering challenges i have completed",
+            "link": "https://github.com/Wyliemaster/Writeups",
+            "icon": null
+        },
+        {
             "name": "LMC Interpreter",
             "description": "An Interpreter for the Little Man Computer Assembly language",
             "link": "https://github.com/Wyliemaster/LMC-Interpreter",
