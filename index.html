@@ -1,99 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/62946885?v=4">
+    <link
+      rel="icon"
+      href="https://avatars.githubusercontent.com/u/62946885?v=4"
+    />
     <title>Home</title>
-</head>
 
-<body>
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="stylesheet" href="stylesheets/port.css" />
 
-    <div class="topnav" id="myTopnav">
-        <a href="/" class="active">Home</a>
-        <a href="/apps/index.html">Web Projects</a>
-        <a href="https://github.com/Wyliemaster">Github</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+    <script src="scripts/helper.js"></script>
+  </head>
+  <body>
+    <!-- Global Navbar-->
+    <div class="nav-container">
+      <div>
+        <a class="nav-button" href="">Home</a>
+        <a class="nav-button" onclick="alert('Not Available as of right now')">Projects</a>
+      </div>
     </div>
 
-    <h1 class="title">About Me</h1>
 
-    <div class="about">
-        <p style="font-size: 125%;">My name is <b>Jamie</b> and I am a <a id="age" style="padding: 0;">[age]</a>
-            year old hobbyist programmer from the UK.
-            In my free time I enjoy watching anime, reading manga, playing games or reverse engineering my favourite
-            video games. I am a self-taught programmer and I have been writing programs since July 2020. Some of the
-            programming languages i have learned are: <b>Node.js, Python, PHP, Sql, Rust, C++, Assembly (ARM, x86,
-                LMC)</b>,
-            however, the quality of the code i write varies depending on the language.</p>
+    <!-- About Me-->
+    <div class="port-about-me-container">
+      <label class="port-title">About Me</label>
 
-        <p style="font-size: 125%;">I also have an interest within language studies. I have been teaching myself
-            Japanese as i have an
-            interest in the products that originate from Japan as well as the culture. As of February 2022, I can
-            confidently read <b>ひらがな (Hiragana)</b> and i can read bits of <b>カタカナ (Katakana)</b></p>
+      <p class="port-paragraph">
+        My name is <b>Jamie</b> and i am a <age>{AGE_ERROR}</age> year old
+        hobbyist developer from the UK. In my free time i enjoy watching Anime,
+        reading manga, playing video games and reverse engineering software. I
+        am self taught and have been actively learning new skill since july
+        2020.
+      </p>
+
+      <p class="port-paragraph">
+        I studied Media and Computer Science in college an i have been teaching
+        myself Japanese for fun however, I am currently still at N5 of the JLPT.
+        During my media studies, i was given the opportunity to have experience
+        with film production with the BFI.
+      </p>
     </div>
 
-    <h1 class="title">Projects</h1>
-
-    <div class="about">
-        <p>
-            I have worked on various projects. Below are links to some of my most notable projects
-        </p>
-
-        <div class="projectBtns" id="projects"></div>
-    </div>
-
-    <div class="footer">
-        <p>Contact</p>
-        <p>Discord: Wylie#2674 </p>
-    </div>
+    <!-- Projects -->
+    
+    <label class="port-title" style="display: block">Projects</label>
+    <div class="port-featured-container", id="pin"></div>
 
     <script>
-        document.getElementById("age").innerHTML = Math.floor(((new Date().getTime() / 1000) - 1031087815) / 60 / 60 / 24 / 365);
+      let ages = document.getElementsByTagName("age");
 
+      for (const age of ages) {
+        age.innerHTML = calculate_age();
+      }
 
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-
-        function readTextFile(file) {
-            var rawFile = new XMLHttpRequest();
-            rawFile.open("GET", file, false);
-            rawFile.onreadystatechange = function () {
-                if (rawFile.readyState === 4) {
-                    if (rawFile.status === 200 || rawFile.status == 0) {
-                        var allText = rawFile.responseText;
-                        currentFile = allText
-                    }
-                }
-            }
-            rawFile.send(null);
-        }
-        var currentFile = null;
-
-        readTextFile('data.json')
-        var projects = '';
-        if (currentFile) {
-            let projData = JSON.parse(currentFile).projects;
-
-            projData.forEach(proj => {
-                // Todo: add icon support
-                projects += `<a href="${proj.link}" class="button" style="text-decoration: none;  color: #000000;"><p class="btnT">${proj.name}</p><p class="btnC">${proj.description}</p></a>`
-            });
-
-            document.getElementById("projects").innerHTML = projects;
-
-        }
+      load_imports("pinned.json", "pin")
 
     </script>
-
-</body>
-
+  </body>
 </html>
