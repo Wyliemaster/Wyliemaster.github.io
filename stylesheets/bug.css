@@ -75,7 +75,8 @@
     padding: 5% 12%;
     background-color: rgb(55, 55, 55);
     border: 2px ridge rgb(91, 103, 102);
-    min-width: 50%;
+    min-width: 10%;
+    max-width: 20%;
 }
 
 .bug-btn:hover {
@@ -96,6 +97,8 @@
 
         color: white;
         padding: 20% 10%;
+        min-width: 50%;
+        max-width: 70%;
     }
     .bug-popup {
         overflow-y:scroll;
