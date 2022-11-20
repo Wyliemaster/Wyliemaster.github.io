@@ -41,14 +41,15 @@
 
 
     <div style="display:flex; flex-direction: column; align-items:center;">
-    <input type="text" id="name" name="name" style="width: 50%; height: auto;">
+    <textarea type="text" id="name" name="name" style="width: 90%;height:500px;font-size:15pt;" placeholder="Enter your button code here..."></textarea>
+
     <button onclick="
     {
         let value = document.getElementById('name').value; 
         create_btn(value, i++);
         
-    }">Add Button</button>
-</div>
+    }" style="padding: 50px; margin: 10px">Add Button</button>
+    </div>
     <div class="bug-container" id="bug-container"></div>
 
     <script>
