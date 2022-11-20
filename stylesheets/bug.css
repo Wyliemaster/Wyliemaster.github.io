@@ -75,6 +75,7 @@
     padding: 5% 12%;
     background-color: rgb(55, 55, 55);
     border: 2px ridge rgb(91, 103, 102);
+    min-width: 50%;
 }
 
 .bug-btn:hover {
@@ -115,6 +116,11 @@ bug-title, bug-desc, bug-fix, bug-details {
     width: 90%;
     text-align:left;
     padding: 5%;
+}
+
+bug-desc
+{
+    text-align: center;
 }
 
 bug-title 
