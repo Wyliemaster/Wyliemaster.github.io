@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      href="https://avatars.githubusercontent.com/u/62946885?v=4"
+    />
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../../stylesheets/main.css" />
+    <link rel="stylesheet" href="../../stylesheets/bug.css" />
+
+    <script src="../../scripts/bugs.js"></script>
+  </head>
+  <body>
+    <div class="popup-shadow" id="shadow"></div>
+    <!-- Global Navbar-->
+    <div class="nav-container">
+      <div>
+        <a class="nav-button" href="https://github.com/Wyliemaster/GD-Bugs"
+          >Contribute</a
+        >
+      </div>
+    </div>
+
+    <label
+      style="
+        display: block;
+        color: white;
+        font-size: xx-large;
+        text-align: center;
+        margin-top: 2%;
+      "
+      >Geometry Dash Bug Database</label
+    >
+
+
+    <div style="display:flex; flex-direction: column; align-items:center;">
+    <input type="text" id="name" name="name" style="width: 50%; height: auto;">
+    <button onclick="
+    {
+        let value = document.getElementById('name').value; 
+
+        create_btn(value, i++);
+        
+    }">Add Button</button>
+</div>
+    <div class="bug-container" id="bug-container"></div>
+
+    <script>
+        let i = -1;
+    </script>
+  </body>
+</html>
