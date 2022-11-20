@@ -66,7 +66,7 @@ async function load_files()
         // add hidden popup
 
         let popup = `<div class="bug-popup" id="bug-popup-${i + 1}" onclick="hide_popup(${i + 1})">
-            <bug-title>${title}</bug-title>
+            <bug-title><u>${title}</u></bug-title>
             <u><b>Fixes</b></u><br><bug-fix>${fix}</bug-fix>
             ${details_section}
         </div>`;
