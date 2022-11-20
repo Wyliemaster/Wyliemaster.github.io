@@ -43,11 +43,12 @@ async function load_files()
         const data = [...bugs[i].matchAll(regex)];
 
         let details = null;
+        let fix = null;
+
         let title = data[0][1];
         let desc = data[1][1];
-        let fix = data[2][1];
 
-        if(data[3])
+        if(data[2])
             fix = data[2][1];
 
         if(data[3])

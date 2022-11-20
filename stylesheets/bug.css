@@ -12,6 +12,7 @@
 
 .bug-popup
 {
+    cursor: pointer;
     overflow-x: hidden;
 
     overflow-y:auto;
@@ -81,6 +82,7 @@
     scale: 1.02;
     transition: all 0.2s ease-in-out, background-color 1s;
     background-color: rgba(108, 147, 192, 0.5);
+    cursor: pointer;
 }
 
 @media (max-width: 480px)
