@@ -39,21 +39,71 @@
       >Geometry Dash Bug Database Debug Menu</label
     >
 
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <textarea
+        type="text"
+        id="name"
+        name="name"
+        style="width: 90%; height: 500px; font-size: 15pt"
+        placeholder="[TITLE]
+  This will be the title that displays on the page
+[/TITLE]
 
-    <div style="display:flex; flex-direction: column; align-items:center;">
-    <textarea type="text" id="name" name="name" style="width: 90%;height:500px;font-size:15pt;" placeholder="Enter your button code here..."></textarea>
+[DESC]
+  This will be a brief description of the bug
+[/DESC]
 
-    <button onclick="
+[FIX]
+  This will be an explanation on how to fix the bug if there is a fix. 
+  If there is no fix then don't add this
+[/FIX]
+
+    "
+      ></textarea>
+
+      <button
+        onclick="
     {
         let value = document.getElementById('name').value; 
         create_btn(value, i++);
         
-    }" style="padding: 50px; margin: 10px">Add Button</button>
+    }"
+        style="padding: 50px; margin: 10px"
+      >
+        Add Button
+      </button>
+      <button
+        onclick="{
+            document.getElementById('bug-container').innerHTML = '';
+      }"
+        style="padding: 50px; margin: 10px"
+      >
+        Remove all Buttons
+      </button>
     </div>
     <div class="bug-container" id="bug-container"></div>
 
     <script>
-        let i = -1;
+      let i = -1;
+      create_btn(`
+      <!--bug_name.gdp-->
+[TITLE]
+  This will be the title that displays on the page
+[/TITLE] <!-- Required -->
+
+[DESC]
+  This will be a brief description of the bug
+[/DESC] <!-- Required -->
+
+[FIX]
+  This will be an explanation on how to fix the bug if there is a fix. 
+  If there is no fix then don't add this
+[/FIX] <!-- Optional -->
+
+[DETAILS]
+  This will include a technical explanation into how the bug is implemented for nerds. 
+  Most contributers won't know so don't use this
+[/DETAILS] <!-- Optional -->`);
     </script>
   </body>
 </html>
