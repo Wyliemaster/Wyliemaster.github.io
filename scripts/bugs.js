@@ -34,48 +34,49 @@ async function fetch_bugs() {
 }
 
 async function load_files() {
-  let regex = /\[.*?](.*?)\[\/.*?\]/gms;
   let bugs = await fetch_bugs();
 
   for (let i = 0; i < bugs.length; i++) {
-    const data = [...bugs[i].matchAll(regex)];
+    create_btn(bugs[i], i);
+  }
+}
 
-    let details = null;
-    let fix = null;
+function parse_file(bug, i = -1) {
+  let regex = /\[.*?](.*?)\[\/.*?\]/gms;
+  const data = [...bug.matchAll(regex)];
 
-    let title = data[0][1];
-    let desc = data[1][1];
+  let details = null;
+  let fix = null;
 
-    if (data[2]) fix = data[2][1];
+  let title = data[0][1];
+  let desc = data[1][1];
 
-    if (data[3]) details = data[3][1];
+  if (data[2]) fix = data[2][1];
 
-    let container = document.getElementById("bug-container");
+  if (data[3]) details = data[3][1];
 
-    let btn = `<div class="bug-btn" onclick="show_popup(${i + 1})">
+  let btn = `<div class="bug-btn" onclick="show_popup(${i + 1})">
             <bug-title><u>${title}</u></bug-title>
             <bug-desc>${desc}</bug-desc>
         </div>`;
 
-    let details_section = details
-      ? `<u><b>Bug Details</b></u> <br><bug-details>${details}</bug-details>`
-      : "";
-    let fixes_section = fix
-      ? `<u><b>Fixes</b></u><br><bug-fix>${fix}</bug-fix>`
-      : "<big-fix>There are no Known Fixes</bug-fix>";
-    // add hidden popup
+  let details_section = details
+    ? `<u><b>Bug Details</b></u> <br><bug-details>${details}</bug-details>`
+    : "";
+  let fixes_section = fix
+    ? `<u><b>Fixes</b></u><br><bug-fix>${fix}</bug-fix>`
+    : "<big-fix>There are no Known Fixes</bug-fix>";
+  // add hidden popup
 
-    let popup = `<div class="bug-popup" id="bug-popup-${
-      i + 1
-    }" onclick="hide_popup(${i + 1})">
+  let popup = `<div class="bug-popup" id="bug-popup-${
+    i + 1
+  }" onclick="hide_popup(${i + 1})">
             <bug-title><u>${title}</u></bug-title>
-            <u><b>Fixes</b></u><br><bug-fix>${fix}</bug-fix>
+            ${fixes_section}
             ${details_section}
         </div>`;
 
-    container.innerHTML += btn;
-    document.body.innerHTML += popup;
-  }
+  return [btn, popup];
 }
 
 function show_popup(id) {
@@ -94,4 +95,13 @@ function hide_popup(id) {
 
   let shadow = document.getElementById("shadow");
   shadow.style.visibility = "hidden";
+}
+
+function create_btn(bug, i = -1) {
+  let container = document.getElementById("bug-container");
+
+  let file = parse_file(bug, i);
+
+  container.innerHTML += file[0];
+  document.body.innerHTML += file[1];
 }
