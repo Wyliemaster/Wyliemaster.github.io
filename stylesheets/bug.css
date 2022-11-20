@@ -72,8 +72,8 @@
   padding: 3% 5%;
   background-color: rgb(55, 55, 55);
   border: 2px ridge rgb(91, 103, 102);
-  min-width: 19.1%;
-  max-width: 19.1%;
+  min-width: 20%;
+  max-width: 20%;
 }
 
 .bug-btn:hover {
