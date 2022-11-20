@@ -1,0 +1,124 @@
+* {
+    overflow: visible;
+}
+
+.popup-shadow
+{
+    position: absolute;
+    z-index: 2;
+    padding: 10000000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+.bug-popup
+{
+    overflow-x: hidden;
+
+    overflow-y:auto;
+    color: white;
+
+    border: 2px groove black;
+    z-index: 10000 !important;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: aqua;
+    background: rgb(90, 104, 122);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    transform-origin: 0 -25%;
+
+    scale: 0;
+
+    min-width: 90%;
+    min-height: 80%;
+
+    max-width: 95%;
+    max-height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    font-size: large;
+}
+
+.bug-container {
+    overflow-x: hidden;
+
+    z-index: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 2%;
+    margin: 0 2%;
+    overflow-y: auto;
+
+}
+
+.bug-btn {
+    transition: all 0.2s ease-in-out;
+
+    margin: 2%;
+    border-radius: 1.5%;
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 12%;
+    background-color: rgb(55, 55, 55);
+    border: 2px ridge rgb(91, 103, 102);
+}
+
+.bug-btn:hover {
+    z-index: 0;
+    scale: 1.02;
+    transition: all 0.2s ease-in-out, background-color 1s;
+    background-color: rgba(108, 147, 192, 0.5);
+}
+
+@media (max-width: 480px)
+{
+
+    .bug-btn
+    {
+        transition: all 0.2s ease-in-out;
+        margin-top: 5%;
+
+        color: white;
+        padding: 20% 10%;
+    }
+    .bug-popup {
+        overflow-y:scroll;
+        padding-top: 110%;
+        padding-bottom: 10%;
+    }
+
+    
+}
+
+bug-title, bug-desc, bug-fix, bug-details {
+    /* overflow-x: hidden; */
+
+    overflow-wrap: initial;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: normal;
+    width: 90%;
+    text-align:left;
+    padding: 5%;
+}
+
+bug-title 
+{
+    text-align: center;
+    font-size: xx-large;
+}
+
