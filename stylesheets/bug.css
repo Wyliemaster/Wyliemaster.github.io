@@ -1,134 +1,127 @@
-.popup-shadow
-{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.5);
-    visibility: hidden;
+.popup-shadow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
 }
 
-.bug-popup
-{
-    cursor: pointer;
-    overflow-x: hidden;
+.bug-popup {
+  cursor: pointer;
+  overflow-x: hidden;
 
-    overflow-y:auto;
-    color: white;
+  overflow-y: auto;
+  color: white;
 
-    border: 2px groove black;
-    z-index: 10000 !important;
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  border: 2px groove black;
+  z-index: 10000 !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    background-color: aqua;
-    background: rgb(90, 104, 122);
-    box-sizing: border-box;
-    border-radius: 5px;
+  background-color: aqua;
+  background: rgb(90, 104, 122);
+  box-sizing: border-box;
+  border-radius: 5px;
 
-    transform-origin: 0 -25%;
+  transform-origin: 0 -25%;
 
-    scale: 0;
+  scale: 0;
 
-    min-width: 90%;
-    min-height: 80%;
+  min-width: 90%;
+  min-height: 80%;
 
-    max-width: 95%;
-    max-height: 90%;
+  max-width: 95%;
+  max-height: 90%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:space-evenly;
-    font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: large;
 }
 
 .bug-container {
-    overflow-x: hidden;
+  overflow-x: hidden;
 
-    z-index: 0;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding-top: 2%;
-    margin: 0 2%;
-    overflow-y: auto;
-
+  z-index: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 2%;
+  margin: 0 2%;
+  overflow-y: auto;
 }
 
 .bug-btn {
-    transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
-    margin: 2%;
-    border-radius: 1.5%;
+  margin: 2%;
+  border-radius: 1.5%;
 
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5% 12%;
-    background-color: rgb(55, 55, 55);
-    border: 2px ridge rgb(91, 103, 102);
-    min-width: 10%;
-    max-width: 20%;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3% 5%;
+  background-color: rgb(55, 55, 55);
+  border: 2px ridge rgb(91, 103, 102);
+  min-width: 19.1%;
+  max-width: 19.1%;
 }
 
 .bug-btn:hover {
-    z-index: 0;
-    scale: 1.02;
-    transition: all 0.2s ease-in-out, background-color 1s;
-    background-color: rgba(108, 147, 192, 0.5);
-    cursor: pointer;
+  z-index: 0;
+  scale: 1.05;
+  transition: all 0.2s ease-in-out, background-color 1s;
+  background-color: rgba(108, 147, 192, 0.5);
+  cursor: pointer;
 }
 
-@media (max-width: 480px)
-{
+@media (max-width: 480px) {
+  .bug-btn {
+    transition: all 0.2s ease-in-out;
+    margin-top: 5%;
 
-    .bug-btn
-    {
-        transition: all 0.2s ease-in-out;
-        margin-top: 5%;
-
-        color: white;
-        padding: 20% 10%;
-        min-width: 50%;
-        max-width: 70%;
-    }
-    .bug-popup {
-        overflow-y:scroll;
-        padding-top: 10%;
-        padding-bottom: 10%;
-    }
-
-    
+    color: white;
+    padding: 20% 10%;
+    min-width: 70%;
+    max-width: 70%;
+  }
+  .bug-popup {
+    overflow-y: scroll;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
 }
 
-bug-title, bug-desc, bug-fix, bug-details {
-    /* overflow-x: hidden; */
+bug-title,
+bug-desc,
+bug-fix,
+bug-details {
+  /* overflow-x: hidden; */
 
-    overflow-wrap: initial;
-    font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
-    word-wrap: normal;
-    width: 90%;
-    text-align:left;
-    padding: 5%;
+  overflow-wrap: initial;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  word-wrap: normal;
+  min-width: 90%;
+  max-width: 8;
+  text-align: left;
+  padding: 5%;
 }
 
-bug-desc
-{
-    text-align: center;
+bug-desc {
+  text-align: center;
 }
 
-bug-title 
-{
-    text-align: center;
-    font-size: xx-large;
+bug-title {
+  text-align: center;
+  font-size: xx-large;
 }
-

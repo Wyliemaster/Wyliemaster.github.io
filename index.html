@@ -21,10 +21,11 @@
     <div class="nav-container">
       <div>
         <a class="nav-button" href="">Home</a>
-        <a class="nav-button" onclick="alert('Not Available as of right now')">Projects</a>
+        <a class="nav-button" onclick="alert('Not Available as of right now')"
+          >Projects</a
+        >
       </div>
     </div>
-
 
     <!-- About Me-->
     <div class="port-about-me-container">
@@ -47,9 +48,9 @@
     </div>
 
     <!-- Projects -->
-    
+
     <label class="port-title" style="display: block">Projects</label>
-    <div class="port-featured-container", id="pin"></div>
+    <div class="port-featured-container" , id="pin"></div>
 
     <script>
       let ages = document.getElementsByTagName("age");
@@ -58,8 +59,7 @@
         age.innerHTML = calculate_age();
       }
 
-      load_imports("pinned.json", "pin")
-
+      load_imports("pinned.json", "pin");
     </script>
   </body>
 </html>
