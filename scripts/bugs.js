@@ -42,6 +42,7 @@ async function load_files() {
 }
 
 function parse_file(bug, i = -1) {
+    
   let regex = /\[.*?](.*?)\[\/.*?\]/gms;
   const data = [...bug.matchAll(regex)];
 
