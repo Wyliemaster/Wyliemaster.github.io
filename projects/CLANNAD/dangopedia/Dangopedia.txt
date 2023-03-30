@@ -659,6 +659,57 @@
 	After Tomoya makes a joke during lunch, Kotomi misunderstands and starts explaining Tsutenkaku, mentioning how the concert hall first floor only allows "Enka"
 
 	
+25 Flower Viewing
+	April 14th
+	Record your own voice over it
+	Just say whatever comes to mind
+
+	April 15th
+	Ignore her
+	Skip class
+	Eat
+	Go down to the courtyard
+	Keep talking
+	Escape
+	I don't feel concerned
+	Do nothing
+
+	April 17th
+	Skip cass
+	Follow her
+	Check for cut-up pages
+	Waste time outside school 
+	Watch as she leaves
+
+	April 18th
+	Let Sunohara do it
+	The library
+	Surprise her
+	Enter the library
+	Call her name
+	I can't leave her alone
+
+	April 19th
+	Go straight home
+	Follow her into the bookstore
+	Offer to walk her home
+
+	April 20th
+	Ask if it's all right to stay
+	Read
+
+	April 21st
+	Wake up like a good student
+	Deny it
+
+	April 23rd
+	Go to the teacher's office
+
+	April 25th
+	Wait for her
+	On the way home, Nagisa says the hill looks beautiful during the  "Flower Viewing" season
+
+
 26 Freeter [BUGGED] [NOT VERIFIED]
 #I've not been able to verify this however due to not having access yet, but this entry is apparently available in After Story however it is bugged.
 #To fix this, you apparently need to use the Decemeber 6, 2015 Version of CLANNAD
@@ -1007,7 +1058,61 @@
 	April 14th
 	Tomoya settles down between the wall and the "Kotatsu"
 	
-	
+
+48 Kotatsu table and Trangerines
+	April 14th
+	Record your own voice over it
+	Just say whatever comes to mind
+
+	April 15th
+	Ignore her
+	Skip class
+	Eat
+	Go down to the courtyard
+	Keep talking
+	Escape
+	I don't feel concerned
+	Do nothing
+
+	April 17th
+	Skip cass
+	Follow her
+	Check for cut-up pages
+	Waste time outside school 
+	Watch as she leaves
+
+	April 18th
+	Let Sunohara do it
+	The library
+	Surprise her
+	Enter the library
+	Call her name
+	I can't leave her alone
+
+	April 19th
+	Go straight home
+	Follow her into the bookstore
+	Offer to walk her home
+
+	April 20th
+	Ask if it's all right to stay
+	Read
+
+	April 21st
+	Wake up like a good student
+	Deny it
+
+	April 23rd
+	Go to the teacher's office
+
+	April 25th
+	Wait for her
+
+	April 26th
+	During the poker game, Kyou mentions that "Kotatsu table and tangerines" are the only things missing
+
+
+
 49 Koujien Dictionary
 	April 14th
 	Just leave it there
