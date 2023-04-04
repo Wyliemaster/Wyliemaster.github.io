@@ -2776,6 +2776,69 @@ This guide was written for the Steam release of CLANNAD, This guide was started 
 	Tomoya tries to escape Fuko after realising he threw out a wedding gift and shouts thank you like "Shinji Tanimura"
 
 
+85 Tell me you love me 24/7
+	April 14th
+	Just leave it there
+
+	April 15th
+	Apologize
+	Skip class
+	Refuse
+	Go down to the courtyard
+	Keep talking
+	Watch how things turn out
+	I'm interested in this
+	I feel concerned
+	Talk to her
+
+	April 16th
+	Just keep walking
+	Don't worry about it
+	That girl from yesterday
+	Stay
+	Make her do it alone
+
+	April 17th
+	Skip class
+	Waste time inside school
+	Sleep
+	Try talking to her
+	Watch as she leaves
+
+	April 18th
+	She uses boobs
+	Gotta catch 'er
+	An empty classroom
+	I'll watch her just a bit more
+	Go sleep
+	Talk to her a bit more
+	Return to the classroom
+	
+	April 19th
+	Go to the old school building
+	To the club rooms
+
+	April 20th
+	Follow him
+	See what happens for a bit longer
+	Help
+
+	April 21st
+	Wake up like a good student
+	I'm bored; I should try to make her drink juice through her nose
+
+	April 22nd
+	React to finding me
+	Time for a prank
+	Put her around somewhere
+	Take it home
+
+	April 23rd
+	Tell me you love me 24/7
+
+	After bumping to Fuko in the hallway, Tomoya responds with "Tell me you love me 24/7"
+
+
 86 There is nothing unnecessary, right?
 	April 14th
 	Just leave it there
@@ -3130,6 +3193,8 @@ This guide was written for the Steam release of CLANNAD, This guide was started 
 	Time for a prank
 	Put her around somewhere
 	Take it home
+
+	April 23rd
 	You were up all night crying, right?
 
 	After bumping into Fuko in the hallway, Tomoya responds with "You were up all nigh crying, right?" 
