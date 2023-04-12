@@ -1207,16 +1207,6 @@ This guide was written for the Steam release of CLANNAD, This guide was started 
 	On the way home, Nagisa says the hill looks beautiful during the  "Flower Viewing" season
 
 
-26 Freeter [BUGGED] [NOT VERIFIED]
-#I've not been able to verify this however due to not having access yet, but this entry is apparently available in After Story however it is bugged.
-#To fix this, you apparently need to use the Decemeber 6, 2015 Version of CLANNAD
-
-#Steam Instructions:	
-#	Right Click -> Properties
-#	Betas
-#	None -> Safe - December 6 2015 Version
-
-
 27 Futarou
 	April 14th
 	Just leave it there
