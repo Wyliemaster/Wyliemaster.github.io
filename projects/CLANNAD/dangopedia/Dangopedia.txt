@@ -2,7 +2,8 @@ This guide was written for the Steam release of CLANNAD, This guide was started 
 
 IMPORTANT INFORMATION
 For dangopedia entries collected from after Story, i have denoted the Playthrough i found the entry for as it is still a WIP
-Once i fully finish the game, i will go back and check whether a specific Playthrough affects it
+Once i fully finish the game, i will go back and check whether a specific Playthrough affects it. The options provided currently assume you
+have access to every After Story Route
 
 
 01 Anpan
@@ -64,6 +65,24 @@ Once i fully finish the game, i will go back and check whether a specific Playth
 	No Branches Required
 	
 	
+05 Bombaye
+	After Story - First Playthrough
+
+	Cohabitation Arc
+	Calm down
+	Yes
+	Clear up the misunderstanding
+	Stay silent and don't move
+	Watch TV
+	Founder's Festival
+	Mock exams
+	No way
+	Oh, fine
+	I do
+
+	After the cram school children run to Sanae, they cheer "Sanae! Bombaye!"
+
+
 06 Bomb a Head!	
 	April 14th
 	Just leave it there
@@ -1304,7 +1323,8 @@ Once i fully finish the game, i will go back and check whether a specific Playth
 	Mock exams
 	No way
 	Oh, fine
-	Answer honestly
+	I do
+	Answer Honestly
 	Sing
 	Ask if there's more
 	Wait until the day after tomorrow and go together
@@ -1331,7 +1351,8 @@ Once i fully finish the game, i will go back and check whether a specific Playth
 	Mock exams
 	No way
 	Oh, fine
-	Answer honestly
+	I do
+	Answer Honestly
 	Sing
 	Ask if there's more
 	Wait until the day after tomorrow and go together
@@ -2176,7 +2197,8 @@ Once i fully finish the game, i will go back and check whether a specific Playth
 	Mock exams
 	No way
 	Oh, fine
-	Answer honestly
+	I do
+	Answer Honestly
 	Sing
 	Ask if there's more
 	Wait until the day after tomorrow and go together
@@ -2581,7 +2603,8 @@ Once i fully finish the game, i will go back and check whether a specific Playth
 	Mock exams
 	No way
 	Oh, fine
-	Answer honestly
+	I do
+	Answer Honestly
 	Sing
 	Ask if there's more
 	Wait until the day after tomorrow and go together
@@ -4172,7 +4195,8 @@ Once i fully finish the game, i will go back and check whether a specific Playth
 	Mock exams
 	No way
 	Oh, fine
-	Answer honestly
+	I do
+	Answer Honestly
 	Sing
 	Ask if there's more
 	Wait until the day after tomorrow and go together
@@ -4319,11 +4343,13 @@ Once i fully finish the game, i will go back and check whether a specific Playth
 	Mock exams
 	No way
 	Oh, fine
-	Answer honestly
+	I do
+	Answer Honestly
 	Sing
 	Ask if there's more
 	Wait until the day after tomorrow and go together
 
+	After Yoshino decides to create a CD, the "Rainy season" finishes up | Tsuyu
 
 
 88 Tsutenkaku
@@ -4640,7 +4666,8 @@ Once i fully finish the game, i will go back and check whether a specific Playth
 	Mock exams
 	No way
 	Oh, fine
-	Answer honestly
+	I do
+	Answer Honestly
 	Sing
 	Ask if there's more
 	Wait until the day after tomorrow and go together
