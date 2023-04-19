@@ -833,28 +833,7 @@ have access to every After Story Route
 	Kotomi says "Day before yesterday I saw a rabbit and yesterday a deer" as Tomoya leaves the library
 
 19 Dango
-	April 14th
-	Just leave it there
-	
-	April 15th
-	Ignore her
-	Sit through class
-	Go down to the courtyard
-	Keep talking
-	Escape
-	I feel concerned
-	Do nothing
-	
-	April 16th
-	Don't skip
-	Run to buy a sandwich
-	Help
-	I couldn't possibly
-	
-	April 17th
-	Sex Appeal
-	
-	Nagisa will draw a poster featuring the big "Dango" family
+	You start with the "Dango" Entry
 
 	
 20 Dogu
@@ -1697,91 +1676,7 @@ have access to every After Story Route
 
 
 34 Honorifics
-	Just leave it there
-	
-	April 15th
-	Ignore her
-	Sit through class
-	Go down to the courtyard
-	Keep talking
-	Watch how things turn out
-	I'm interested in this
-	I don't feel concerned
-	Do nothing
-	
-	April 16th
-	Go with Sunohara
-	Don't skip
-	
-	April 17th
-	Go and watch
-	Follow him
-	Follow him
-	Waste time outside school
-	Watch as she leaves
-	
-	April 18th
-	Accept
-	Kick him back
-	Let sunohara do it
-	Return to the classroom after all
-	Help her
-	
-	April 19th
-	Have him stop already
-	Go staight home
-	
-	April 20th
-	Ignore him
-	
-	April 21st
-	Wake up like a good student
-	Say something
-	I guess so
-	I'll just be patient
-	
-	April 22nd
-	I'm on my way home
-	No, its not like that
-	Have him stop it already
-	
-	April 23rd
-	React to finding me
-	About the fact that she's trying to reform the drama club
-	
-	April 24th
-	Perhaps I just want to be with tomoyo
-	
-	April 25th
-	Start getting ready
-	
-	April 26th
-	Let's eat in the school cafeteria
-	
-	May 2nd
-	In that case, right here and now
-	Something perverted
-	
-	May 3rd
-	Run a simulation
-	Run a simulation
-	No... probably not
-	
-	May 4th
-	Have a fantasy that exceeds all boundaries
-	
-	May 5th
-	Think things can't go on like this
-	
-	May 6th
-	Interfere
-	It's not alright
-	
-	May 11th
-	Kick him back
-	
-	Tomoyo
-	Tomoyo's brother comments on Tomoya not using "Honorifics" for Tomoyo
+	You start with the "Honorifics" Entry
 
 	
 35 Ikkokudou
@@ -1923,6 +1818,10 @@ have access to every After Story Route
 	React to finding me
 
 	Tomoya response to Sunohara's question about where to drink coffee with "The Jukai under mount Fuji"
+
+
+38 The Japanese Education System
+	You start with the "Japanese Education System" Entry
 
 
 40 Kachikachi Yama
