@@ -3694,6 +3694,11 @@ have access to every After Story Route
 	
 	After Tomoya tells the story to Yukine, he makes a joke about adding Yukine's "sleep laughing" to her Resume
 	
+
+70 Sakura
+	You start with the "Sakura" Entry
+
+
 71 Sankakutabe | Proper Manners when we eat
 	# IMPORTANT
 	# This dangopedia entry is bugged and requires some setting up to fix
