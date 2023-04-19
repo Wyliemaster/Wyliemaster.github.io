@@ -2577,7 +2577,6 @@ have access to every After Story Route
 	Nagisa and Tomoya go on a date after the play and they write a "Love umbrella" on the chalkboard
 
 
-
 52 Maasai Language
 	April 14th
 	Just leave it there
@@ -2836,6 +2835,90 @@ have access to every After Story Route
 
 	May 2nd
 	In the club Room, Kotomi tries her best to tell a joke and says a "Milk fight" killed on the crowd of high school girls
+
+
+56 Momoi-san
+	April 14th
+	Just leave it there
+	
+	April 15th
+	Ignore Her
+	Skip class
+	Refuse
+	Go down to the courtyard
+	Keep talking
+	Escape
+	I feel concerned
+	Do nothing
+
+	April 16
+	Run to buy a sandwich
+	Help
+	I couldn't possibly
+
+	April 17th
+	Skip class
+	Wander around alone
+	A drawing
+	Go look for her
+	Look in the class next door
+	Try talking to her
+
+	April 18th
+	Let Sunohara do it
+	Gotta catch 'er
+	An empty classroom
+	I'll watch her just a bit more
+	Return to the classroom after all
+	What kinda plays are we gonna do?
+	Grab Furukawa's hand and run past him
+
+	April 19th
+	Go check on her
+	
+	April 20th
+	How's Furukawa doing?
+	Ignore him
+	
+	April 21st
+	Look out the window
+	Keep waiting
+	Go to negotiate in her place
+
+	April 22nd
+	Magic
+	Ask Fuko for help
+	Talk to a homeroom teacher
+	Keep waiting
+	Take it home
+	Don't help
+
+	April 23rd
+	No
+	Tell me you love me 24/7
+	No
+	Go for a walk
+	Call out to it
+	Don't talk to her
+
+	April 24th
+	Call out to it
+	Embrace her
+
+	April 26th
+	Rush ahead
+	Look around
+	Get Koumura to join
+
+	April 27th
+	I'm helping out
+	Hold off
+
+	April 28th
+	Search the old school building
+	Search the empty classrooms
+
+	Sunohara tries convincing Fuko to join basketball using fame as an incentive, Fuko asks if she'll become like "Momoi-san"
 
 
 57 Momotarou
