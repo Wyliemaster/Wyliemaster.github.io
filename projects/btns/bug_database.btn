@@ -1,0 +1,8 @@
+<a
+  class="port-featured-button"
+  href="./bugs/">
+  <label class="port-featured-title">Bug Database</label>
+
+  <label class="port-featured-description"
+    >An attempt to document bugs or other interesting things regarding Geometry Dash</label>
+</a>

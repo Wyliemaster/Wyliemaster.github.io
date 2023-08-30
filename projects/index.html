@@ -6,20 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="https://avatars.githubusercontent.com/u/62946885?v=4">
-    <title>Home</title>
+    <title>Projects</title>
 
-    <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="stylesheet" href="../stylesheets/main.css" />
+    <link rel="stylesheet" href="../stylesheets/port.css" />
+
     <script src="../scripts/helper.js"></script>
     
 </head>
 <body>
-
     <!-- Global Navbar-->
     <div class="nav-container">
         <div>
             <a class="nav-button" href="../">Home</a>
             <a class="nav-button" href="">Projects</a>
         </div>
+        <a class="nav-button" href="https://github.com/Wyliemaster"
+        >Github</a
+      >
     </div>
+
+    <div class="port-featured-container" , id="web"></div>
+
+    <script>
+        load_projects("projects.json", "web");
+    </script>
 </body>
 </html>

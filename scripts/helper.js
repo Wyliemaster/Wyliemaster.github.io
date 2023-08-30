@@ -1,6 +1,6 @@
 function calculate_age() {
   return Math.floor(
-    (new Date().getTime() / 1000 - 1031087815) / 60 / 60 / 24 / 365
+    (new Date().getTime() / 1000 - 1032739200) / 60 / 60 / 24 / 365
   );
 }
 
@@ -31,6 +31,35 @@ async function get_imports(config) {
 async function load_imports(config, id) {
   let container = document.getElementById(id);
   let imports = await get_imports(config);
+
+  imports.forEach((element) => {
+    container.innerHTML += element;
+  });
+}
+
+
+async function get_projects(config) {
+  let files = [];
+
+  let data = await (await fetch(`/projects/${config}`)).json();
+
+  for (let i = 0; i < data.items.length; i++) {
+    let res = await fetch(`/projects/${data.path}/${data.items[i]}`);
+
+    if (res.status != 200) continue;
+
+    let file = await res.text();
+
+    files.push(file);
+  }
+
+  return files;
+}
+
+
+async function load_projects(config, id) {
+  let container = document.getElementById(id);
+  let imports = await get_projects(config);
 
   imports.forEach((element) => {
     container.innerHTML += element;
