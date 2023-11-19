@@ -37,25 +37,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5% 5%;
+  width: 40%; /* Change this to your desired width */
+  height: 290px; /* Change this to your desired height */
   background-color: rgb(55, 55, 55);
   border: 2px ridge rgb(91, 103, 102);
+
+  word-wrap: normal;
 }
 
 .port-featured-button:hover {
   scale: 1.05;
   transition: all 0.2s ease-in-out, background-color 1s;
   background-color: rgba(108, 147, 192, 0.5);
-}
-
-@media (max-width: 480px) {
-  .port-featured-button {
-    transition: all 0.2s ease-in-out;
-    margin-top: 5%;
-
-    color: white;
-    padding: 5% 15%;
-  }
 }
 
 .port-featured-title {
@@ -65,4 +58,32 @@
 
 .port-featured-description {
   font-size: large;
+  text-align: center;
 }
+
+
+@media (max-width: 480px) {
+  .port-featured-button {
+    transition: all 0.2s ease-in-out;
+    margin-top: 5%;
+
+    width: 50%; /* Change this to your desired width */
+    height: 30%; /* Change this to your desired height */
+
+    color: white;
+  }
+
+  .port-featured-title {
+  font-size: large;
+  margin-bottom: 1%;
+  text-align: center;
+}
+
+.port-featured-description {
+  font-size: small;
+  text-align: center;
+  padding: 0 1%;
+}
+}
+
+
