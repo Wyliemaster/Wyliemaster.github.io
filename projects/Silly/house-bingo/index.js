@@ -66,5 +66,5 @@ function getRandomWord(arr) {
 
 function toggle_bingo_square(x)
 {
-    document.getElementById(x).style.backgroundColor = "red";
+    document.getElementById(x).style.backgroundColor = "#523880";
 }

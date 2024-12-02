@@ -3,6 +3,10 @@
 
 }
 
+body{
+    background-color: #64536e;
+}
+
 #bingo-grid {
     display: flex;
     flex-direction: column;
@@ -37,5 +41,5 @@
 .bingo-grid-square:hover
 {
     cursor: pointer;
-    background-color: rgba(0, 128, 0, 0.362);
+    background-color: #53556e
 }
