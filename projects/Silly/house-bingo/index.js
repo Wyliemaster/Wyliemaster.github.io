@@ -1,4 +1,5 @@
-
+let count = 0;
+let max = 0;
 function make_grid()
 {
     const rows = document.getElementsByClassName("bingo-grid-row");
@@ -10,12 +11,14 @@ function make_grid()
 
         for (let j = 0; j < row.children.length; j++) {
             const square = row.children[j];
+            max++;
             find_content(i, j).then((word) => {
                 square.innerHTML = word
             })
         }
-
     }
+
+    document.getElementById("counter").innerHTML = `${count} / ${max}`
 }
 function find_content(x, y) {
     const id = (x * 5) + y + 1;
@@ -66,5 +69,7 @@ function getRandomWord(arr) {
 
 function toggle_bingo_square(x)
 {
+    count++;
     document.getElementById(x).style.backgroundColor = "#523880";
+    document.getElementById("counter").innerHTML = `${count} / ${max}`
 }
