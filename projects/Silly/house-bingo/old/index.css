@@ -1,0 +1,45 @@
+* {
+    /* border: red 1px solid; */
+
+}
+
+body{
+    background-color: #64536e;
+}
+
+#bingo-grid {
+    display: flex;
+    flex-direction: column;
+ }
+
+ .bingo-grid-square {
+    max-width: 10%;
+    min-width: 10%;
+    padding: 30px 30px;
+
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.2; /* Adjust for consistent height */
+    border: black 1px solid;
+
+    box-sizing: border-box; /* Include padding in width */
+
+    display: grid;
+    place-items: center;
+}
+
+.bingo-grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* Equal height for all children */
+    justify-content: center;
+}
+
+
+.bingo-grid-square:hover
+{
+    cursor: pointer;
+    background-color: #53556e
+}
