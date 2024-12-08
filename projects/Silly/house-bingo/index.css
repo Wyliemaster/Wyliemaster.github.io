@@ -45,3 +45,13 @@ body {
 .grid-item:hover {
     background-color: #9CC2F0 !important;
 }
+
+@media (max-width: 480px) {
+    :root
+    {
+        --screen-width: calc(100vw / (var(--num-columns) + 1) );
+    }
+    body {
+        font-size: xx-small;
+    }
+}
